@@ -1,11 +1,10 @@
-﻿@model IEnumerable<LMS.Student>
+﻿@model IEnumerable<LMS.Result>
 
 @{
-    /**/
-
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/MainPageLayout.cshtml";
 }
+
 
 <div class="home">
     <div class="home_background_container prlx_parent">
@@ -28,6 +27,7 @@
     </div>
 </div>
 
+<h2>Index</h2>
 <p>
     <div class="col-lg-3 footer_col">
         <div class="footer_column_title">
@@ -42,44 +42,23 @@
     <thead>
         <tr>
 
-            <th scope="col">Id</th>
-            <th scope="col">Batch</th>
+            <th scope="col">Student_Id</th>
+            <th scope="col">Student_name</th>
+            <th scope="col">Course_Id</th>
             <th scope="col">Class</th>
-            <th scope="col">Name</th>
-            <th scope="col">Father Name</th>
-            <th scope="col">CNIC</th>
-            <th scope="col">Address</th>
-            <th scope="col">Contact no.</th>
-            <th scope="col">Monthly fee</th>
+            <th scope="col">Grade</th>
+
         </tr>
     </thead>
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Id)
+            @Html.DisplayNameFor(model => model.Course.Name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Batch)
+            @Html.DisplayNameFor(model => model.Student.Class)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Class)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Father_Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CNIC)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Address)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Contact_No)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Monthly_Fee)
+            @Html.DisplayNameFor(model => model.Grade)
         </th>
         <th></th>
     </tr>
@@ -88,37 +67,18 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Id)
+                @Html.DisplayFor(modelItem => item.Course.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Batch)
+                @Html.DisplayFor(modelItem => item.Student.Class)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Class)
+                @Html.DisplayFor(modelItem => item.Grade)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Father_Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CNIC)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Contact_No)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Monthly_Fee)
-            </td>
-            <td>
-                @Html.ActionLink("Result", "Result", new { id = item.Roll_No }) |
-                @Html.ActionLink("Edit", "Edit", new { id = item.Roll_No }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Roll_No }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Roll_No })
+                @Html.ActionLink("Edit", "Edit", new { id = item.Student_Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Student_Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Student_Id })
             </td>
         </tr>
     }

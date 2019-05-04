@@ -1,4 +1,4 @@
-﻿@model LMS.Student
+﻿@model LMS.Result
 
 @{
     ViewBag.Title = "Details";
@@ -8,84 +8,28 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Student</h4>
+    <h4>Result</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Id)
+            @Html.DisplayNameFor(model => model.Course.Name)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Id)
+            @Html.DisplayFor(model => model.Course.Name)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Batch)
+            @Html.DisplayNameFor(model => model.Student.Class)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Batch)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Class)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Class)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Father_Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Father_Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CNIC)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CNIC)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Address)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Contact_No)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Contact_No)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Monthly_Fee)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Monthly_Fee)
+            @Html.DisplayFor(model => model.Student.Class)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Roll_No }) |
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
