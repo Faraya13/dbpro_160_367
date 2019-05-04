@@ -1,4 +1,4 @@
-﻿@model LMS.Result
+﻿@model LMS.Login
 
 @{
     ViewBag.Title = "Delete";
@@ -9,25 +9,9 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Result</h4>
+    <h4>Login</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Course.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Course.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Student.Class)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Student.Class)
-        </dd>
-
     </dl>
 
     @using (Html.BeginForm()) {
