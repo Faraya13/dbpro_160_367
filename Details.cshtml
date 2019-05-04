@@ -1,4 +1,4 @@
-﻿@model LMS.Result
+﻿@model LMS.Course
 
 @{
     ViewBag.Title = "Details";
@@ -8,28 +8,28 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Result</h4>
+    <h4>Course</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Course.Name)
+            @Html.DisplayNameFor(model => model.Name)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Course.Name)
+            @Html.DisplayFor(model => model.Name)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Student.Class)
+            @Html.DisplayNameFor(model => model.Details)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Student.Class)
+            @Html.DisplayFor(model => model.Details)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Course_Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
