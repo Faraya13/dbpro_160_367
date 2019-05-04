@@ -1,4 +1,4 @@
-﻿@model LMS.Exam
+﻿@model LMS.Student
 
 @{
     ViewBag.Title = "Delete";
@@ -9,15 +9,15 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Exam</h4>
+    <h4>Student</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Course_Name)
+            @Html.DisplayNameFor(model => model.Id)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Course_Name)
+            @Html.DisplayFor(model => model.Id)
         </dd>
 
         <dt>
@@ -29,11 +29,59 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Date)
+            @Html.DisplayNameFor(model => model.Class)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Date)
+            @Html.DisplayFor(model => model.Class)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Father_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Father_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CNIC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CNIC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contact_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Monthly_Fee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Monthly_Fee)
         </dd>
 
     </dl>
